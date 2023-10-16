@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  bg: string;
+  img: string;
+  url: string;
+}
+const { title, bg, img, url } = Astro.props;
+---
+
+<a
+  class:list={bg}
+  class="flex select-none items-center gap-3 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md transition-all hover:shadow-lg cursor-pointer focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] w-full mt-5"
+  href={url}
+  target="_blank"
+>
+  <img class="h-5 w-5 bg-cover rounded-2xl" src={img} />
+  {title}
+</a>
